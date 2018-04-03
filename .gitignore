@@ -1,0 +1,5 @@
+.project
+.eclipse
+.DS_Store
+bin
+build
