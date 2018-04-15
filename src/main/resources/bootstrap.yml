@@ -1,0 +1,35 @@
+---
+
+spring:
+  application: 
+    name: consumer 
+
+---
+
+spring:
+  profiles: local
+  cloud:
+    config:
+      uri: http://localhost:8081
+ 
+---
+
+spring:
+  profiles: cloud
+  application:
+    name: ${vcap.application.space_name}
+
+---
+
+spring:
+  profiles: config
+  cloud:
+    config:
+      uri: ${vcap.services.config-server.credentials.uri}
+      username: ${vcap.services.config-server.credentials.username}
+      password: ${vcap.services.config-server.credentials.password}
+
+
+
+      
+    

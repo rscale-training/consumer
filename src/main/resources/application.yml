@@ -1,0 +1,13 @@
+---
+
+spring:
+  profiles: local
+  devtools:
+    livereload:
+      enabled: true
+  thymeleaf:
+    cache: false    
+
+server:
+  port: 8083
+                               

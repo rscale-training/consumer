@@ -1,0 +1,11 @@
+---
+
+applications:
+- name: consumer
+  memory: 750M
+  instances: 1
+  buildpack: java_buildpack
+  path: build/libs/consumer.jar
+  services:
+  - config-server
+  

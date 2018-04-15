@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+    	<title>Hands on Labs</title>
+    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  		<!-- Bootstrap -->
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+  		<link href="/css/style.css" rel="stylesheet" />
+  	</head>
+  	<body>
+    	<div class="container">
+    
+    		<div class="row logos">
+    			<div class="col text-left">
+      	  			<a href="https://rscale.io" target="_blank">
+      	    			<img src="/images/resilient-scale-logo.png" class="img-fluid mx-auto d-block our-logo" alt="Resilient Scale Logo" />
+      	  			</a>
+      			</div>
+      			<div class="col text-center">
+  	  	  			<img src="/images/CFF_Logo_vertical_RGB.png" class="img-fluid mx-auto d-block logo" alt="Cloud Foundry Logo" />
+  	  			</div>
+  	  			<div class="col text-right">
+      	  			<a href="https://https://superorbit.al" target="_blank">
+      					<img src="/images/superorbital-logo.png" class="img-fluid mx-auto d-block our-logo" alt="Superorbital Logo"/>
+         			</a>
+        		</div>
+    		</div>
+
+
+	  <div class="row text-center mx-auto">
+	  	<div class="col mx-auto">
+		  	<div class="card mx-auto" style="width: 18rem;">
+	  		  <div class="card-header">
+	  		  	<h5>
+	  		  		<i class="fas fa-cogs"></i> Config Server
+	  		  	</h5>
+	  		  </div>
+	  		  <div class="card-body">
+	  		    <i class="far fa-check-circle fa-5x status-complete" th:if="${configServer != null}"></i>
+	  		    <i class="far fa-circle fa-5x status-incomplete" th:if="${configServer == null}"></i>
+	  		    <p th:if="${configServer != null}" class="status-message">message:</p>
+	  		    <p th:if="${configServer == null}" class="status-message">not connected</p>
+	    	    <p class="card-text" th:text="${configServerMessage}"></p>
+	    	  </div>
+	  		</div>
+	  	</div>
+	  	<div class="col mx-auto">
+		  	<div class="card mx-auto" style="width: 18rem;">
+	  		  <div class="card-header">
+	  		  	<h5>
+	  		  		<i class="fas fa-search"></i> Eureka
+	  		  	</h5>
+	  		  </div>
+	  		  <div class="card-body text-center">
+	  		    <i class="far fa-check-circle fa-5x status-complete" th:if="${eureka != null}"></i>
+	  		    <i class="far fa-circle fa-5x status-incomplete" th:if="${eureka == null}"></i>
+	  		    <p th:if="${eureka != null}" class="status-message">connected</p>
+	  		    <p th:if="${eureka == null}" class="status-message">not connected</p>
+	    	    <p class="card-text" th:text="${eureka}"> </p>
+	    	  </div>
+	  		</div>
+	  	</div>
+		<div class="col mx-auto">
+		  	<div class="card mx-auto" style="width: 18rem;">
+	  		  <div class="card-header">
+	  		  	<h5>
+	  		  		<i class="far fa-comment"></i> Producer
+	  		  	</h5>
+	  		  </div>
+	  		  <div class="card-body text-center">
+	  		    <i class="far fa-check-circle fa-5x status-complete" th:if="${producer != null}"></i>
+	  		    <i class="far fa-circle fa-5x status-incomplete" th:if="${producer == null}"></i>
+	  		    <p th:if="${producer != null}" class="status-message">the producer says:</p>
+	  		    <p th:if="${producer == null}" class="status-message">Unavailable</p>
+	    	    <p th:if="${producer != null}" class="card-text" th:text="${producer}"> </p>
+	    	  </div>
+	  		</div>
+	  	</div>
+	  </div>
+	  
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    </div>
+  </body>
+
+
+</html>

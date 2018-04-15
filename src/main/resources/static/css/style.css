@@ -1,0 +1,32 @@
+.logos {
+	margin-top: 20px;
+	margin-bottom: 80px;
+}
+
+.logo {
+	max-height: 150px;
+}
+
+.our-logo {
+	max-height: 30px;
+}
+
+.footer {
+	border-top: 1px solid #CCCCCC;
+	margin-top: 80px;
+	padding-top: 10px;
+}
+
+.status-complete {
+	color: green;
+}
+
+.status-incomplete {
+	color: red;
+}
+
+.status-message {
+	margin-top: 5px;
+	font-weight: bold;
+}
+
